@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="app-ui">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- Document title -->
+    <title>Admin Panel</title>
+
+    <meta name="description" content=" - Admin Dashboard" />
+    <meta name="author" content="Bylancer" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="#">
+
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,900%7CRoboto+Slab:300,400%7CRoboto+Mono:400" />
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/slick/slick.min.css" />
+    <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css" />
+    <!-- css select2 -->
+    <link rel="stylesheet" href="assets/js/plugins/select2/select2.min.css" />
+    <link rel="stylesheet" href="assets/js/plugins/select2/select2-bootstrap.css" />
+    <!-- Zeunix CSS stylesheets -->
+    <link rel="stylesheet" id="css-font-awesome" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" id="css-ionicons" href="assets/css/ionicons.css" />
+    <link rel="stylesheet" id="css-bootstrap" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" id="css-app" href="assets/css/app.css" />
+    <link rel="stylesheet" id="css-app-custom" href="assets/css/app-custom.css" />
+    <link rel="stylesheet" id="css-app-animation" href="assets/css/animation.css" />
+    <!-- End Stylesheets -->
+    <link rel="stylesheet" href="assets/css/category.css" />
+
+    <link rel="stylesheet" href="assets/js/plugins/asscrollable/asScrollable.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/slidepanel/slidePanel.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css" />
+
+
+    <!--alerts CSS -->
+    <link href="assets/js/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="assets/js/plugins/alertify/alertify.min.css" rel="stylesheet" type="text/css">
+     
+    <script>
+        // var sidepanel_ajaxurl = '<?php echo $config['site_url']."admin/ajax_sidepanel.html"; ?>';
+    </script>
+</head>
+
+<body class="app-ui layout-has-drawer layout-has-fixed-header">
+
+<div class="app-layout-canvas">
+    <div class="app-layout-container">
+
+        <!-- Drawer -->
+        <aside class="app-layout-drawer">
+
+            <!-- Drawer scroll area -->
+            <div class="app-layout-drawer-scroll">
+                <!-- Drawer logo -->
+                <div id="logo" class="drawer-header">
+                    <a href="index.html">
+                        <img class="img-responsive" src="#" title="admin" alt="admin" /></a>
+                </div>
+
+                <!-- Drawer navigation -->
+                <nav class="drawer-main">
+                    <ul class="nav nav-drawer">
+                        <li class="nav-item nav-drawer-header">Apps</li>
+
+                        <li class="nav-item">
+                            <a href="index.html"><i class="ion-ios-speedometer-outline"></i> Dashboard</a>
+                        </li>
+
+                        <li class="nav-item nav-drawer-header">Management</li>
+
+                        <li class="nav-item">
+                            <a href="companies.html"><i class="fa fa-bank"></i> Companies</a>
+                        </li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="#"><i class="ion-briefcase"></i> Jobs</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="post_active.html">Active Jobs</a></li>
+                                <li><a href="post_pending.html">Pending Jobs</a></li>
+                                <li><a href="post_hidden.html">Hidden by User</a></li>
+                                <li><a href="post_resubmit.html">Resubmitted Jobs</a></li>
+                                <li><a href="post_expire.html">Expire Jobs</a></li>
+                                <li><a href="posts.html">All Jobs List</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="post-types.html"><i class="fa fa-suitcase"></i> Job Types</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="salary-types.html"><i class="fa fa-dollar"></i> Salary Types</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="resumes.html"><i class="fa fa-paperclip"></i> Resumes</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="category.html"><i class="ion-ios-list-outline"></i> Category</a>
+                        </li>
+                        
+                        <!-- <li class="nav-item nav-item-has-subnav">
+                            <a href="#"><i class="fa fa-weixin"></i> Chat </a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="chating.html">Messages</a></li>
+                                <li><a href="chat_setting.html">Setting</a></li>
+                            </ul>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="email-template.html"><i class="ion-ios-email"></i> Email Template</a>
+                        </li>
+                        <li class="nav-item nav-drawer-header">International</li>
+                        <li class="nav-item">
+                            <a href="loc_countries.html"><i class="ion-ios-location-outline"></i> Countries</a>
+                        </li>
+                        
+
+                        <li class="nav-item nav-drawer-header">Settings</li>
+
+
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="#"><i class="ion-android-settings"></i> Setting</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="setting.html">General</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-drawer-header">Content</li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="#"><i class="ion-ios-paper-outline"></i> Courses</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="blog.html">All Course</a></li>
+                                <li><a href="blog-new.html">Add New</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="testimonials.html"><i class="ion-document"></i> Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages.html"><i class="ion-ios-browsers-outline"></i> Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="advertising.html"><i class="ion-ios-monitor-outline"></i> Advertising</a>
+                        </li>
+                        <li class="nav-item nav-drawer-header">Account</li>
+                        <li class="nav-item">
+                            <a href="users.html"><i class="ion-ios-people"></i> Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admins.html"><i class="ion-android-contact"></i> Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="logout.html"><i class="ion-ios-people-outline"></i> Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End drawer navigation -->
+            </div>
+            <!-- End drawer scroll area -->
+        </aside>
+        <!-- End drawer -->
+
+        <!-- Header -->
+        <header class="app-layout-header">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <button class="pull-left hidden-lg hidden-md navbar-toggle" type="button" data-toggle="layout" data-action="sidebar_toggle">
+                            <span class="sr-only">Toggle drawer</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                    </div>
+                    <div class="collapse navbar-collapse" id="header-navbar-collapse">
+                        <!-- .navbar-left -->
+
+                        <ul class="nav navbar-nav navbar-right navbar-toolbar hidden-sm hidden-xs">
+                            <li class="dropdown dropdown-profile">
+                                <a href="#" data-toggle="dropdown">
+                                    <span class="m-r-sm"> Admin<span class="caret"></span></span>
+                                    <img class="img-avatar img-avatar-48" src="#" alt="#" />
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="logout.html">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- .navbar-right -->
+                    </div>
+                </div>
+                <!-- .container-fluid -->
+            </nav>
+            <!-- .navbar-default -->
+        </header>
+        <!-- End header -->
+        <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css" />
+        <main class="app-layout-content">
+        
+            <!-- Page Content -->
+            <div class="container-fluid p-y-md">
+                <!-- Partial Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Pending Jobs</h4>
+                        <div class="pull-right">
+                            <form method="post">
+                                <button type="submit" name="approve" id="approve" class="btn btn-warning waves-effect waves-light m-r-10"><i class="fa fa-refresh"></i> Approve All</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <div id="js-table-list">
+                            <table class="js-table-checkable table table-vcenter table-hover" id="ajax_datatable" data-jsonfile="post.php?status=pending">
+                                <thead>
+                                <tr>
+                                    <th class="text-center w-5 sortingNone">
+                                        <label class="css-input css-checkbox css-checkbox-default m-t-0 m-b-0">
+                                            <input type="checkbox" id="check-all" name="check-all"><span></span>
+                                        </label>
+                                    </th>
+                                    <th>Title</th>
+                                    <th class="hidden-xs hidden-sm">Username</th>
+                                    <th class="hidden-xs hidden-sm">Company</th>
+                                    <th class="hidden-xs w-30">Location</th>
+                                    <th class="hidden-xs hidden-sm" style="width:100px">Posted</th>
+                                    <th class="hidden-xs hidden-sm" style="width:100px">Status</th>
+                                    <th class="text-center" style="width: 128px;">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody id="ajax-services">
+        
+                                </tbody>
+                            </table>
+                        </div>
+        
+        
+                    </div>
+                    <!-- .card-block -->
+                </div>
+                <!-- .card -->
+                <!-- End Partial Table -->
+        
+            </div>
+            <!-- .container-fluid -->
+            <!-- End Page Content -->
+        
+        </main>
+        
+        
+        <!-- Site Action -->
+        <div class="site-action">
+            <button type="button" class="site-action-toggle btn-raised btn btn-warning btn-floating" style="visibility: hidden;">
+                <i class="back-icon ion-android-close animation-scale-up" aria-hidden="true"></i>
+            </button>
+            <div class="site-action-buttons">
+                <button type="button" data-ajax-response="deletemarked" data-ajax-action="deleteads"
+                        class="btn-raised btn btn-danger btn-floating animation-slide-bottom">
+                    <i class="icon ion-android-delete" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <!-- End Site Action -->
+
+
+    <!-- footer started -->
+    
+    <!-- Apps Modal -->
+    <!-- Opens from the button in the header -->
+    <div id="apps-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-sm modal-dialog modal-dialog-top">
+            <div class="modal-content">
+                <!-- Apps card -->
+                <div class="card m-b-0">
+                    <div class="card-header bg-app bg-inverse">
+                        <h4>Apps</h4>
+                        <ul class="card-actions">
+                            <li>
+                                <button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-block">
+                        <div class="row text-center">
+                            <div class="col-xs-6">
+                                <a class="card card-block m-b-0 bg-app-secondary bg-inverse" href="index.html">
+                                    <i class="ion-speedometer fa-4x"></i>
+                                    <p>Admin</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a class="card card-block m-b-0 bg-app-tertiary bg-inverse" target="_blank" href="../home">
+                                    <i class="ion-laptop fa-4x"></i>
+                                    <p>Frontend</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .card-block -->
+                </div>
+                <!-- End Apps card -->
+            </div>
+        </div>
+    </div>
+    <!-- End Apps Modal -->
+    
+    <div class="app-ui-mask-modal"></div>
+    
+    <!-- Zeunix Core JS: jQuery, Bootstrap, slimScroll, scrollLock and App.js -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+    <script src="assets/js/core/jquery.placeholder.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app-custom.js"></script>
+    <script src="assets/js/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+    
+    
+    <script src="js/admin-ajax.js?ver=3.0"></script>
+    <script src="js/ajaxForm/jquery.form.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="assets/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="assets/js/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
+    
+    <!-- datatables JS Code -->
+    <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/pages/base_tables_datatables.js"></script>
+    <!-- select2  -->
+    <script src="assets/js/plugins/select2/select2.full.min.js"></script>
+    
+    
+    <script src="assets/js/plugins/asscrollable/jquery.asScrollable.all.min.js"></script>
+    <script src="assets/js/plugins/slidepanel/jquery-slidePanel.min.js"></script>
+    <script src="assets/js/plugins/bootbox/bootbox.js"></script>
+    <script src="assets/js/slidepanel/core.min.js"></script>
+    <script src="assets/js/plugins/alertify/alertify.js"></script>
+    <script src="assets/js/slidepanel/action-btn.min.js"></script>
+    <script src="assets/js/slidepanel/selectable.min.js"></script>
+    <script src="assets/js/slidepanel/components.js"></script>
+    <script src="assets/js/slidepanel/app.min.js"></script>
+    
+
+    <!--Code For Chart-->
+<!-- Page Plugins -->
+<script src="assets/js/plugins/slick/slick.min.js"></script>
+<script src="assets/js/plugins/chartjs/Chart.min.js"></script>
+
+ 
+
+<script>
+    // Lines Chart Data 3
+    var $dashChartLinesData3 = {
+        labels: " admin",
+        datasets: [
+            {
+                label: 'This Week',
+                fillColor: App.hexToRgba( App.colors.blue, 50 ),
+                pointColor: App.colors.blue,
+                data: '123'
+            }
+        ]
+    };
+
+    // Lines Chart Data 4
+    var $dashChartLinesData4 = {
+        labels: '[<?php echo $chartWeeklyLable; ?>]',
+        datasets: [
+            {
+                label: 'This Week',
+                strokeColor: App.colors.blue,
+                pointColor: '#fff',
+                pointStrokeColor: App.colors.blue,
+                data: ['hello']
+            }
+        ]
+    };
+</script>
+<!--Code For Chart-->
+<!-- Page JS Code -->
+<script src="assets/js/pages/index.js"></script>
+<script>
+    $(function()
+    {
+        // Init page helpers (Slick Slider plugin)
+        App.initHelpers('slick');
+    });
+</script>
+
+</body>
+
+</html>
+
+    
